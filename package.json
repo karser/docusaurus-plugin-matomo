@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-plugin-matomo",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Matomo plugin for Docusaurus.",
   "main": "src/index.js",
   "publishConfig": {
@@ -11,12 +11,8 @@
     "url": "git+https://github.com/karser/docusaurus-plugin-matomo.git"
   },
   "license": "MIT",
-  "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.72"
-  },
   "peerDependencies": {
-    "react": "^16.8.4 || ^17.0.0",
-    "react-dom": "^16.8.4 || ^17.0.0"
+    "@docusaurus/core": "^2.0.0-alpha.56"
   },
   "engines": {
     "node": ">=12.13.0"
