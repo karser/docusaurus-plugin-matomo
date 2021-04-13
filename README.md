@@ -18,3 +18,7 @@ module.exports = {
   },
 };
 ```
+
+const path = require('path');
+
+      // path.resolve(__dirname, 'plugins/docusaurus-plugin-matomo')
