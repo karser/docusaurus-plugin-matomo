@@ -37,7 +37,7 @@ module.exports = function (context) {
             tagName: 'link',
             attributes: {
               rel: 'preconnect',
-              href: '${matomoUrl}',
+              href: `${matomoUrl}`,
             },
           },
           {
