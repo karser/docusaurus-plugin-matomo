@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-plugin-matomo",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Matomo plugin for Docusaurus.",
   "main": "src/index.js",
   "publishConfig": {
