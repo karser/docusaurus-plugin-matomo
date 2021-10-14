@@ -17,6 +17,8 @@ module.exports = function (context) {
   if (!siteId) {
     throw new Error('Please specify the `siteId` field in the `themeConfig.matomo`');
   }
+  const phpLoader = matomo.phpLoader || 'matomo.php';
+  const jsLoader = matomo.jsLoader || 'matomo.js';
 
   const isProd = process.env.NODE_ENV === 'production';
 
@@ -44,14 +46,17 @@ module.exports = function (context) {
             tagName: 'script',
             innerHTML: `
               var _paq = window._paq = window._paq || [];
+              _paq.push(['setRequestMethod', 'POST']);
               _paq.push(['trackPageView']);
               _paq.push(['enableLinkTracking']);
+              _paq.push(['enableHeartBeatTimer']);
               (function() {
                 var u="${matomoUrl}";
-                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setRequestMethod', 'POST']);
+                _paq.push(['setTrackerUrl', u+'${phpLoader}']);
                 _paq.push(['setSiteId', '${siteId}']);
                 var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-                g.type='text/javascript'; g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+                g.type='text/javascript'; g.async=true; g.src=u+'${jsLoader}'; s.parentNode.insertBefore(g,s);
               })();
             `,
           },

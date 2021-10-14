@@ -14,6 +14,8 @@ module.exports = {
     matomo: {
       matomoUrl: 'https://your.matomo.instance/',
       siteId: 'ID',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
     },
   },
 };
