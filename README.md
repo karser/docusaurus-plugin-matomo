@@ -16,6 +16,11 @@ module.exports = {
       siteId: 'ID',
       phpLoader: 'matomo.php',
       jsLoader: 'matomo.js',
+      // optional matomo methods
+      tracking: [
+        ['enableHeartBeatTimer'],
+        ['setRequestMethod', 'POST']
+      ]
     },
   },
 };
