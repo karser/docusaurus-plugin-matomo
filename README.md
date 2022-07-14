@@ -18,7 +18,7 @@ module.exports = {
       jsLoader: 'matomo.js',
       // optional matomo methods
       tracking: [
-        ["enableHeartBeatTimer"],
+        ['enableHeartBeatTimer'],
         ['setRequestMethod', 'POST']
       ]
     },
