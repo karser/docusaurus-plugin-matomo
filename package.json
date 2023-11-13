@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.56"
+    "@docusaurus/core": "^2.0.0-alpha.56 || ^3.0.0"
   },
   "engines": {
     "node": ">=12.13.0"
